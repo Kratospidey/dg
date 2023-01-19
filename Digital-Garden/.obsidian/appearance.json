@@ -1,0 +1,11 @@
+{
+  "accentColor": "#bebbbb",
+  "cssTheme": "Things",
+  "theme": "obsidian",
+  "interfaceFontFamily": "Segoe UI",
+  "textFontFamily": "Noto Sans",
+  "monospaceFontFamily": "Fira Code",
+  "translucency": true,
+  "baseFontSize": 13,
+  "nativeMenus": false
+}

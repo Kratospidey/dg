@@ -1,0 +1,147 @@
+{
+  "main": {
+    "id": "106e37a550b311e0",
+    "type": "split",
+    "children": [
+      {
+        "id": "fbaca06261362799",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "25b2e9d77ebce6a7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "College/Sem IV/Content/Physics Project.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "fe265b584a05d99a",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "7620eef9c3993edd",
+        "type": "leaf",
+        "state": {
+          "type": "file-explorer",
+          "state": {
+            "sortOrder": "alphabetical"
+          }
+        }
+      },
+      {
+        "id": "8496e8721c4e186c",
+        "type": "leaf",
+        "state": {
+          "type": "search",
+          "state": {
+            "query": "",
+            "matchingCase": false,
+            "explainSearch": false,
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical"
+          }
+        }
+      },
+      {
+        "id": "32cfa1b15e3a7faa",
+        "type": "leaf",
+        "state": {
+          "type": "tag",
+          "state": {
+            "sortOrder": "frequency",
+            "useHierarchy": true
+          }
+        }
+      },
+      {
+        "id": "09c80092d3e3c629",
+        "type": "leaf",
+        "state": {
+          "type": "starred",
+          "state": {}
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "right": {
+    "id": "58ec51392962c274",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "3d05eff9c5cdadfa",
+        "type": "leaf",
+        "state": {
+          "type": "backlink",
+          "state": {
+            "file": "College/Sem IV/Content/Physics Project.md",
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical",
+            "showSearch": false,
+            "searchQuery": "",
+            "backlinkCollapsed": false,
+            "unlinkedCollapsed": true
+          }
+        }
+      },
+      {
+        "id": "761973abf23b9a0e",
+        "type": "leaf",
+        "state": {
+          "type": "outgoing-link",
+          "state": {
+            "file": "College/Sem IV/Content/Physics Project.md",
+            "linksCollapsed": false,
+            "unlinkedCollapsed": true
+          }
+        }
+      },
+      {
+        "id": "6c812a11c449e70a",
+        "type": "leaf",
+        "state": {
+          "type": "outline",
+          "state": {
+            "file": "College/Sem IV/Content/Physics Project.md"
+          }
+        }
+      },
+      {
+        "id": "4781555ba4b395bd",
+        "type": "leaf",
+        "state": {
+          "type": "review-queue-list-view",
+          "state": {}
+        }
+      },
+      {
+        "id": "743272c2d616600d",
+        "type": "leaf",
+        "state": {
+          "type": "calendar",
+          "state": {}
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "active": "25b2e9d77ebce6a7",
+  "lastOpenFiles": [
+    "College/Sem IV/MOCs/Physics.md",
+    "Untitled.md",
+    "Depths of Tartarus/Daily Note Templete.md",
+    "Articles/Everything is Aiming.md"
+  ]
+}
