@@ -1,0 +1,19 @@
+{
+  "layout": "docs",
+  "data": [],
+  "body": {
+    "raw": "\n[[ITL Lab 1]]\n\n[[ITL Lab 2]]\n\n[[ITL Lab 3]]\n",
+    "code": "var Component=(()=>{var h=Object.create;var l=Object.defineProperty;var d=Object.getOwnPropertyDescriptor;var b=Object.getOwnPropertyNames;var x=Object.getPrototypeOf,f=Object.prototype.hasOwnProperty;var g=(n,e)=>()=>(e||n((e={exports:{}}).exports,e),e.exports),j=(n,e)=>{for(var a in e)l(n,a,{get:e[a],enumerable:!0})},r=(n,e,a,s)=>{if(e&&typeof e==\"object\"||typeof e==\"function\")for(let c of b(e))!f.call(n,c)&&c!==a&&l(n,c,{get:()=>e[c],enumerable:!(s=d(e,c))||s.enumerable});return n};var p=(n,e,a)=>(a=n!=null?h(x(n)):{},r(e||!n||!n.__esModule?l(a,\"default\",{value:n,enumerable:!0}):a,n)),u=n=>r(l({},\"__esModule\",{value:!0}),n);var o=g((I,i)=>{i.exports=_jsx_runtime});var w={};j(w,{default:()=>_});var t=p(o());function m(n){let e=Object.assign({p:\"p\",a:\"a\"},n.components);return(0,t.jsxs)(t.Fragment,{children:[(0,t.jsx)(e.p,{children:(0,t.jsx)(e.a,{className:\"internal new\",href:\"/college/sem-iv/content/itl-lab-1\",children:\"ITL Lab 1\"})}),`\n`,(0,t.jsx)(e.p,{children:(0,t.jsx)(e.a,{className:\"internal new\",href:\"/college/sem-iv/content/itl-lab-2\",children:\"ITL Lab 2\"})}),`\n`,(0,t.jsx)(e.p,{children:(0,t.jsx)(e.a,{className:\"internal new\",href:\"/college/sem-iv/content/itl-lab-3\",children:\"ITL Lab 3\"})})]})}function L(n={}){let{wrapper:e}=n.components||{};return e?(0,t.jsx)(e,Object.assign({},n,{children:(0,t.jsx)(m,n)})):m(n)}var _=L;return u(w);})();\n;return Component;"
+  },
+  "_id": "College/Sem IV/Content/ITL Labs.md",
+  "_raw": {
+    "sourceFilePath": "College/Sem IV/Content/ITL Labs.md",
+    "sourceFileName": "ITL Labs.md",
+    "sourceFileDir": "College/Sem IV/Content",
+    "contentType": "markdown",
+    "flattenedPath": "College/Sem IV/Content/ITL Labs"
+  },
+  "type": "Page",
+  "url_path": "College/Sem IV/Content/ITL Labs",
+  "slug": "ITL Labs"
+}

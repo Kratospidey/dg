@@ -1,0 +1,19 @@
+{
+  "layout": "docs",
+  "data": [],
+  "body": {
+    "raw": "\n[[GCS Mining and Mining Industry]]\n[[GCS Technical Terms ]]\n[[GCS Mining Company Info]]\n[[GCS Public Sentiment of GFGL]]\n",
+    "code": "var Component=(()=>{var g=Object.create;var s=Object.defineProperty;var f=Object.getOwnPropertyDescriptor;var d=Object.getOwnPropertyNames;var h=Object.getPrototypeOf,u=Object.prototype.hasOwnProperty;var p=(e,n)=>()=>(n||e((n={exports:{}}).exports,n),n.exports),x=(e,n)=>{for(var i in n)s(e,i,{get:n[i],enumerable:!0})},r=(e,n,i,a)=>{if(n&&typeof n==\"object\"||typeof n==\"function\")for(let c of d(n))!u.call(e,c)&&c!==i&&s(e,c,{get:()=>n[c],enumerable:!(a=f(n,c))||a.enumerable});return e};var j=(e,n,i)=>(i=e!=null?g(h(e)):{},r(n||!e||!e.__esModule?s(i,\"default\",{value:e,enumerable:!0}):i,e)),C=e=>r(s({},\"__esModule\",{value:!0}),e);var o=p((y,l)=>{l.exports=_jsx_runtime});var _={};x(_,{default:()=>M});var t=j(o());function m(e){let n=Object.assign({p:\"p\",a:\"a\"},e.components);return(0,t.jsxs)(n.p,{children:[(0,t.jsx)(n.a,{className:\"internal new\",href:\"/college/sem-iv/content/gcs-mining-and-mining-industry\",children:\"GCS Mining and Mining Industry\"}),`\n`,(0,t.jsx)(n.a,{className:\"internal new\",href:\"/gcs-technical-terms-\",children:\"GCS Technical Terms \"}),`\n`,(0,t.jsx)(n.a,{className:\"internal new\",href:\"/college/sem-iv/content/gcs-mining-company-info\",children:\"GCS Mining Company Info\"}),`\n`,(0,t.jsx)(n.a,{className:\"internal new\",href:\"/college/sem-iv/content/gcs-public-sentiment-of-gfgl\",children:\"GCS Public Sentiment of GFGL\"})]})}function G(e={}){let{wrapper:n}=e.components||{};return n?(0,t.jsx)(n,Object.assign({},e,{children:(0,t.jsx)(m,e)})):m(e)}var M=G;return C(_);})();\n;return Component;"
+  },
+  "_id": "College/Sem IV/Content/GCS Intro to case study.md",
+  "_raw": {
+    "sourceFilePath": "College/Sem IV/Content/GCS Intro to case study.md",
+    "sourceFileName": "GCS Intro to case study.md",
+    "sourceFileDir": "College/Sem IV/Content",
+    "contentType": "markdown",
+    "flattenedPath": "College/Sem IV/Content/GCS Intro to case study"
+  },
+  "type": "Page",
+  "url_path": "College/Sem IV/Content/GCS Intro to case study",
+  "slug": "GCS Intro to case study"
+}

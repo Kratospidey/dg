@@ -1,0 +1,119 @@
+<!DOCTYPE html><html><head><title>Flowershow</title><meta property="og:title" content="Flowershow"/><link rel="icon" href="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;text y=%22.9em%22 font-size=%2290%22&gt;💐&lt;/text&gt;&lt;/svg&gt;"/><meta charSet="utf-8"/><meta name="viewport" content="initial-scale=1.0, width=device-width"/><meta name="robots" content="index,follow"/><meta name="next-head-count" content="6"/><link rel="preload" href="/_next/static/css/0b37ae9fa3cb196d.css" as="style"/><link rel="stylesheet" href="/_next/static/css/0b37ae9fa3cb196d.css" data-n-g=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js"></script><script src="/_next/static/chunks/webpack-08a53a89c57b2169.js" defer=""></script><script src="/_next/static/chunks/framework-114634acb84f8baa.js" defer=""></script><script src="/_next/static/chunks/main-dc1c692d63c50e17.js" defer=""></script><script src="/_next/static/chunks/pages/_app-aa2f47433ae907d7.js" defer=""></script><script src="/_next/static/chunks/pages/%5B%5B...slug%5D%5D-c56bba745415c516.js" defer=""></script><script src="/_next/static/dx8-lOgzMavXNxsNaqq0-/_buildManifest.js" defer=""></script><script src="/_next/static/dx8-lOgzMavXNxsNaqq0-/_ssgManifest.js" defer=""></script></head><body><div id="__next"><script>!function(){try{var d=document.documentElement,c=d.classList;c.remove('light','dark');var e=localStorage.getItem('theme');if('system'===e||(!e&&false)){var t='(prefers-color-scheme: dark)',m=window.matchMedia(t);if(m.media!==t||m.matches){d.style.colorScheme = 'dark';c.add('dark')}else{d.style.colorScheme = 'light';c.add('light')}}else if(e){c.add(e|| '')}else{c.add('dark')}if(e==='light'||e==='dark'||!e)d.style.colorScheme=e||'dark'}catch(e){}}()</script><div class="min-h-screen bg-background dark:bg-background-dark"><header class="
+        sticky top-0 z-50 flex items-center justify-between px-4 py-5 sm:px-6 lg:px-8 max-w-full
+        dark:bg-slate-900
+      "><div class="mr-2 sm:mr-4 flex lg:hidden"><button type="button" class="relative" aria-label="Open navigation"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" class="h-6 w-6 stroke-slate-500"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button><div style="position:fixed;top:1px;left:1px;width:1px;height:0;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border-width:0;display:none"></div></div><div class="flex flex-none items-center"><a aria-label="Home page" class="flex items-center font-extrabold text-xl sm:text-2xl text-slate-900 dark:text-white" href="/"><span>Flowershow</span></a><div class="hidden lg:flex ml-8 mr-6 sm:mr-8 md:mr-0"></div></div><div class="relative flex items-center basis-auto justify-end gap-6 xl:gap-8 md:shrink w-full"></div></header><div class="relative mx-auto"><main class="flex-auto"><article class="docs prose text-primary dark:text-primary-dark dark:prose-invert prose-headings:font-headings prose-a:break-words mx-auto p-6"><header><div class="mb-6"></div></header><section><div class="relative"><pre><code class="language-c++ code-highlight"><span class="code-line">#include &lt;iostream&gt;
+</span><span class="code-line">
+</span><span class="code-line">#include &lt;stack&gt;
+</span><span class="code-line">
+</span><span class="code-line">using namespace std;
+</span><span class="code-line">
+</span><span class="code-line">  
+</span><span class="code-line">
+</span><span class="code-line">const int NUM_DISKS = 3;
+</span><span class="code-line">
+</span><span class="code-line">stack&lt;int&gt; towers[3];
+</span><span class="code-line">
+</span><span class="code-line">int moves = 0;
+</span><span class="code-line">
+</span><span class="code-line">  
+</span><span class="code-line">
+</span><span class="code-line">void moveDisk(int from, int to) {
+</span><span class="code-line">
+</span><span class="code-line">    int disk = towers[from].top();
+</span><span class="code-line">
+</span><span class="code-line">    towers[from].pop();
+</span><span class="code-line">
+</span><span class="code-line">    towers[to].push(disk);
+</span><span class="code-line">
+</span><span class="code-line">    moves++;
+</span><span class="code-line">
+</span><span class="code-line">    cout &lt;&lt; &quot;Move disk &quot; &lt;&lt; disk &lt;&lt; &quot; from tower &quot; &lt;&lt; from+1 &lt;&lt; &quot; to tower &quot; &lt;&lt; to+1 &lt;&lt; endl;
+</span><span class="code-line">
+</span><span class="code-line">}
+</span><span class="code-line">
+</span><span class="code-line">  
+</span><span class="code-line">  
+</span><span class="code-line">  
+</span><span class="code-line">
+</span><span class="code-line">void printTowers() {
+</span><span class="code-line">
+</span><span class="code-line">    for (int i = 0; i &lt; 3; i++) {
+</span><span class="code-line">
+</span><span class="code-line">        cout &lt;&lt; &quot;Tower &quot; &lt;&lt; i+1 &lt;&lt; &quot;: &quot;;
+</span><span class="code-line">
+</span><span class="code-line">        stack&lt;int&gt; tower = towers[i];
+</span><span class="code-line">
+</span><span class="code-line">        while (!tower.empty()) {
+</span><span class="code-line">
+</span><span class="code-line">            cout &lt;&lt; tower.top() &lt;&lt; &quot; &quot;;
+</span><span class="code-line">
+</span><span class="code-line">            tower.pop();
+</span><span class="code-line">
+</span><span class="code-line">        }
+</span><span class="code-line">
+</span><span class="code-line">        cout &lt;&lt; endl;
+</span><span class="code-line">
+</span><span class="code-line">    }
+</span><span class="code-line">
+</span><span class="code-line">}
+</span><span class="code-line">
+</span><span class="code-line">  
+</span><span class="code-line">
+</span><span class="code-line">int main()
+</span><span class="code-line">
+</span><span class="code-line">{
+</span><span class="code-line">
+</span><span class="code-line">  
+</span><span class="code-line">
+</span><span class="code-line">    for (int i = NUM_DISKS; i &gt; 0; i--) {
+</span><span class="code-line">
+</span><span class="code-line">        towers[0].push(i);
+</span><span class="code-line">
+</span><span class="code-line">    }
+</span><span class="code-line">
+</span><span class="code-line">  
+</span><span class="code-line">
+</span><span class="code-line">    int from, to;
+</span><span class="code-line">
+</span><span class="code-line">    cout &lt;&lt; &quot;Tower of Hanoi innit &quot; &lt;&lt; endl;
+</span><span class="code-line">
+</span><span class="code-line">    cout &lt;&lt; &quot;Enter the number of the tower you want to move a disk from,&quot; &lt;&lt; endl;
+</span><span class="code-line">
+</span><span class="code-line">    cout &lt;&lt; &quot;followed by the number of the tower you want to move the disk to.&quot; &lt;&lt; endl;
+</span><span class="code-line">
+</span><span class="code-line">  
+</span><span class="code-line">
+</span><span class="code-line">    while (towers[2].size() != NUM_DISKS) {
+</span><span class="code-line">
+</span><span class="code-line">        printTowers();
+</span><span class="code-line">
+</span><span class="code-line">        cout &lt;&lt; &quot;Moves made: &quot; &lt;&lt; moves &lt;&lt; endl;
+</span><span class="code-line">
+</span><span class="code-line">        cout &lt;&lt; &quot;Enter the tower to move disk from: &quot;;
+</span><span class="code-line">
+</span><span class="code-line">        cin &gt;&gt; from;
+</span><span class="code-line">
+</span><span class="code-line">        cout &lt;&lt; &quot;Enter the tower to move disk to: &quot;;
+</span><span class="code-line">
+</span><span class="code-line">        cin &gt;&gt; to;
+</span><span class="code-line">
+</span><span class="code-line">        if(from &lt; 1 || from &gt; 3 || to &lt; 1 || to &gt; 3) cout &lt;&lt; &quot;Invalid input, Please enter between 1-3&quot; &lt;&lt; endl;
+</span><span class="code-line">
+</span><span class="code-line">        else if(towers[from-1].empty()) cout &lt;&lt; &quot;No disk in this tower!&quot; &lt;&lt; endl;
+</span><span class="code-line">
+</span><span class="code-line">        else if(!towers[to-1].empty() &amp;&amp; towers[from-1].top() &gt; towers[to-1].top()) cout &lt;&lt; &quot;Can&#x27;t put bigger disk on top of smaller disk!&quot; &lt;&lt; endl;
+</span><span class="code-line">
+</span><span class="code-line">        else moveDisk(from-1, to-1);
+</span><span class="code-line">
+</span><span class="code-line">    }
+</span><span class="code-line">
+</span><span class="code-line">  
+</span><span class="code-line">
+</span><span class="code-line">    cout &lt;&lt; &quot;You have successfully completed the game in &quot; &lt;&lt; moves &lt;&lt; &quot; moves!&quot; &lt;&lt; endl;
+</span><span class="code-line">
+</span><span class="code-line">    cout&lt;&lt;&quot;Big brain person can do it in just a single move tho&quot;&lt;&lt;endl;
+</span><span class="code-line">
+</span><span class="code-line">    return 0;
+</span><span class="code-line">
+</span><span class="code-line">}
+</span></code></pre></div></section></article>;</main></div><footer class="bg-background dark:bg-background-dark prose dark:prose-invert max-w-none flex flex-col items-center justify-center w-full h-auto pt-10 pb-20"><div class="flex w-full flex-wrap justify-center"></div><p class="flex items-center justify-center">Created by<a href="" target="_blank" rel="noopener noreferrer" class="flex items-center no-underline"></a></p><p class="flex items-center justify-center">Made with<a href="https://flowershow.app/" target="_blank" rel="noopener noreferrer" class="flex items-center no-underline"><img src="https://flowershow.app/assets/images/logo.svg" alt="Flowershow" class="my-0 h-6 block"/>Flowershow</a></p></footer></div></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"layout":"docs","data":[],"body":{"raw":"\n```c++\n#include \u003ciostream\u003e\n\n#include \u003cstack\u003e\n\nusing namespace std;\n\n  \n\nconst int NUM_DISKS = 3;\n\nstack\u003cint\u003e towers[3];\n\nint moves = 0;\n\n  \n\nvoid moveDisk(int from, int to) {\n\n    int disk = towers[from].top();\n\n    towers[from].pop();\n\n    towers[to].push(disk);\n\n    moves++;\n\n    cout \u003c\u003c \"Move disk \" \u003c\u003c disk \u003c\u003c \" from tower \" \u003c\u003c from+1 \u003c\u003c \" to tower \" \u003c\u003c to+1 \u003c\u003c endl;\n\n}\n\n  \n  \n  \n\nvoid printTowers() {\n\n    for (int i = 0; i \u003c 3; i++) {\n\n        cout \u003c\u003c \"Tower \" \u003c\u003c i+1 \u003c\u003c \": \";\n\n        stack\u003cint\u003e tower = towers[i];\n\n        while (!tower.empty()) {\n\n            cout \u003c\u003c tower.top() \u003c\u003c \" \";\n\n            tower.pop();\n\n        }\n\n        cout \u003c\u003c endl;\n\n    }\n\n}\n\n  \n\nint main()\n\n{\n\n  \n\n    for (int i = NUM_DISKS; i \u003e 0; i--) {\n\n        towers[0].push(i);\n\n    }\n\n  \n\n    int from, to;\n\n    cout \u003c\u003c \"Tower of Hanoi innit \" \u003c\u003c endl;\n\n    cout \u003c\u003c \"Enter the number of the tower you want to move a disk from,\" \u003c\u003c endl;\n\n    cout \u003c\u003c \"followed by the number of the tower you want to move the disk to.\" \u003c\u003c endl;\n\n  \n\n    while (towers[2].size() != NUM_DISKS) {\n\n        printTowers();\n\n        cout \u003c\u003c \"Moves made: \" \u003c\u003c moves \u003c\u003c endl;\n\n        cout \u003c\u003c \"Enter the tower to move disk from: \";\n\n        cin \u003e\u003e from;\n\n        cout \u003c\u003c \"Enter the tower to move disk to: \";\n\n        cin \u003e\u003e to;\n\n        if(from \u003c 1 || from \u003e 3 || to \u003c 1 || to \u003e 3) cout \u003c\u003c \"Invalid input, Please enter between 1-3\" \u003c\u003c endl;\n\n        else if(towers[from-1].empty()) cout \u003c\u003c \"No disk in this tower!\" \u003c\u003c endl;\n\n        else if(!towers[to-1].empty() \u0026\u0026 towers[from-1].top() \u003e towers[to-1].top()) cout \u003c\u003c \"Can't put bigger disk on top of smaller disk!\" \u003c\u003c endl;\n\n        else moveDisk(from-1, to-1);\n\n    }\n\n  \n\n    cout \u003c\u003c \"You have successfully completed the game in \" \u003c\u003c moves \u003c\u003c \" moves!\" \u003c\u003c endl;\n\n    cout\u003c\u003c\"Big brain person can do it in just a single move tho\"\u003c\u003cendl;\n\n    return 0;\n\n}\n```\n","code":"var Component=(()=\u003e{var p=Object.create;var l=Object.defineProperty;var h=Object.getOwnPropertyDescriptor;var t=Object.getOwnPropertyNames;var N=Object.getPrototypeOf,u=Object.prototype.hasOwnProperty;var w=(s,e)=\u003e()=\u003e(e||s((e={exports:{}}).exports,e),e.exports),f=(s,e)=\u003e{for(var c in e)l(s,c,{get:e[c],enumerable:!0})},d=(s,e,c,i)=\u003e{if(e\u0026\u0026typeof e==\"object\"||typeof e==\"function\")for(let a of t(e))!u.call(s,a)\u0026\u0026a!==c\u0026\u0026l(s,a,{get:()=\u003ee[a],enumerable:!(i=h(e,a))||i.enumerable});return s};var v=(s,e,c)=\u003e(c=s!=null?p(N(s)):{},d(e||!s||!s.__esModule?l(c,\"default\",{value:s,enumerable:!0}):c,s)),k=s=\u003ed(l({},\"__esModule\",{value:!0}),s);var r=w((x,o)=\u003e{o.exports=_jsx_runtime});var b={};f(b,{default:()=\u003e_});var n=v(r());function m(s){let e=Object.assign({pre:\"pre\",code:\"code\",span:\"span\"},s.components);return(0,n.jsx)(e.pre,{children:(0,n.jsxs)(e.code,{className:\"language-c++ code-highlight\",children:[(0,n.jsx)(e.span,{className:\"code-line\",children:`#include \u003ciostream\u003e\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`#include \u003cstack\u003e\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`using namespace std;\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`  \n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`const int NUM_DISKS = 3;\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`stack\u003cint\u003e towers[3];\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`int moves = 0;\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`  \n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`void moveDisk(int from, int to) {\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\\xA0 \\xA0 int disk = towers[from].top();\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\\xA0 \\xA0 towers[from].pop();\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\\xA0 \\xA0 towers[to].push(disk);\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\\xA0 \\xA0 moves++;\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\\xA0 \\xA0 cout \u003c\u003c \"Move disk \" \u003c\u003c disk \u003c\u003c \" from tower \" \u003c\u003c from+1 \u003c\u003c \" to tower \" \u003c\u003c to+1 \u003c\u003c endl;\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`}\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`  \n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`  \n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`  \n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`void printTowers() {\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\\xA0 \\xA0 for (int i = 0; i \u003c 3; i++) {\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\\xA0 \\xA0 \\xA0 \\xA0 cout \u003c\u003c \"Tower \" \u003c\u003c i+1 \u003c\u003c \": \";\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\\xA0 \\xA0 \\xA0 \\xA0 stack\u003cint\u003e tower = towers[i];\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\\xA0 \\xA0 \\xA0 \\xA0 while (!tower.empty()) {\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\\xA0 \\xA0 \\xA0 \\xA0 \\xA0 \\xA0 cout \u003c\u003c tower.top() \u003c\u003c \" \";\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\\xA0 \\xA0 \\xA0 \\xA0 \\xA0 \\xA0 tower.pop();\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\\xA0 \\xA0 \\xA0 \\xA0 }\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\\xA0 \\xA0 \\xA0 \\xA0 cout \u003c\u003c endl;\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\\xA0 \\xA0 }\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`}\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`  \n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`int main()\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`{\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`  \n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\\xA0 \\xA0 for (int i = NUM_DISKS; i \u003e 0; i--) {\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\\xA0 \\xA0 \\xA0 \\xA0 towers[0].push(i);\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\\xA0 \\xA0 }\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`  \n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\\xA0 \\xA0 int from, to;\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\\xA0 \\xA0 cout \u003c\u003c \"Tower of Hanoi innit \" \u003c\u003c endl;\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\\xA0 \\xA0 cout \u003c\u003c \"Enter the number of the tower you want to move a disk from,\" \u003c\u003c endl;\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\\xA0 \\xA0 cout \u003c\u003c \"followed by the number of the tower you want to move the disk to.\" \u003c\u003c endl;\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`  \n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\\xA0 \\xA0 while (towers[2].size() != NUM_DISKS) {\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\\xA0 \\xA0 \\xA0 \\xA0 printTowers();\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\\xA0 \\xA0 \\xA0 \\xA0 cout \u003c\u003c \"Moves made: \" \u003c\u003c moves \u003c\u003c endl;\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\\xA0 \\xA0 \\xA0 \\xA0 cout \u003c\u003c \"Enter the tower to move disk from: \";\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\\xA0 \\xA0 \\xA0 \\xA0 cin \u003e\u003e from;\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\\xA0 \\xA0 \\xA0 \\xA0 cout \u003c\u003c \"Enter the tower to move disk to: \";\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\\xA0 \\xA0 \\xA0 \\xA0 cin \u003e\u003e to;\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\\xA0 \\xA0 \\xA0 \\xA0 if(from \u003c 1 || from \u003e 3 || to \u003c 1 || to \u003e 3) cout \u003c\u003c \"Invalid input, Please enter between 1-3\" \u003c\u003c endl;\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\\xA0 \\xA0 \\xA0 \\xA0 else if(towers[from-1].empty()) cout \u003c\u003c \"No disk in this tower!\" \u003c\u003c endl;\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\\xA0 \\xA0 \\xA0 \\xA0 else if(!towers[to-1].empty() \u0026\u0026 towers[from-1].top() \u003e towers[to-1].top()) cout \u003c\u003c \"Can't put bigger disk on top of smaller disk!\" \u003c\u003c endl;\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\\xA0 \\xA0 \\xA0 \\xA0 else moveDisk(from-1, to-1);\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\\xA0 \\xA0 }\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`  \n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\\xA0 \\xA0 cout \u003c\u003c \"You have successfully completed the game in \" \u003c\u003c moves \u003c\u003c \" moves!\" \u003c\u003c endl;\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\\xA0 \\xA0 cout\u003c\u003c\"Big brain person can do it in just a single move tho\"\u003c\u003cendl;\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\\xA0 \\xA0 return 0;\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`\n`}),(0,n.jsx)(e.span,{className:\"code-line\",children:`}\n`})]})})}function g(s={}){let{wrapper:e}=s.components||{};return e?(0,n.jsx)(e,Object.assign({},s,{children:(0,n.jsx)(m,s)})):m(s)}var _=g;return k(b);})();\n;return Component;"},"_id":"College/Sem IV/Content/Tower of Hanoi.md","_raw":{"sourceFilePath":"College/Sem IV/Content/Tower of Hanoi.md","sourceFileName":"Tower of Hanoi.md","sourceFileDir":"College/Sem IV/Content","contentType":"markdown","flattenedPath":"College/Sem IV/Content/Tower of Hanoi"},"type":"Page","url_path":"College/Sem IV/Content/Tower of Hanoi","slug":"Tower of Hanoi","authorsDetails":[],"globals":{}},"__N_SSG":true},"page":"/[[...slug]]","query":{"slug":["College","Sem IV","Content","Tower of Hanoi"]},"buildId":"dx8-lOgzMavXNxsNaqq0-","isFallback":false,"gsp":true,"scriptLoader":[]}</script></body></html>
