@@ -1,5 +1,0 @@
-[[context.production]]
-base = ".flowershow/.next"
-
-[build]
-publish = ".flowershow/.next"
